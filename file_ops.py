@@ -74,6 +74,7 @@ def write_first_line_to_file(file_contents, output_filename):
     x=file_contents.split("\n")[0]
     with open(output_filename, 'w') as f:
         f.write(x)
+    return
     
     # f=open(output_filename, 'w')
     # f.write(file_contents.split('\n')[0])
@@ -123,7 +124,7 @@ def read_file_in_reverse(file_name):
         list: list of the lines of the file in reverse order.
     """
     ### WRITE SOLUTION HERE
-    with open(file_name, 'r'):
+    with open(file_name, 'r') as f:
         x=f.read()
         l=x.split('\n').reverse()
     return l
