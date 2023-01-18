@@ -8,7 +8,7 @@ that it returns and calculates the final bill for the user.
 > ### **Tips: Before you Begin**
 > #### **To view your code and instructions side-by-side**, select the following in your VSCode toolbar:
 > - View -> Editor Layout -> Two Columns
-> - To view this file in Preview mode, right click on this README.md file and `Open Preview`
+> - To view this file sin Preview mode, right click on this README.md file and `Open Preview`
 > - Select your code file in the code tree, which will open it up in a new VSCode tab.
 > - Drag your assessment code files over to the second column. 
 > - Great work! You can now see instructions and code at the same time. 
