@@ -39,12 +39,12 @@ def read_file_into_list(file_name):
         list: a list where each element is a line in the file.
     """
     ### WRITE SOLUTION HERE
-    x=[]
+
     f=open(file_name,'r')
-    for a in f:
-        x.append(a)
+    x=f.readlines()
     f.close()
-    return a
+    return x
+
     
     # x=[]
     # with open(file_name) as f:
@@ -75,6 +75,7 @@ def write_first_line_to_file(file_contents, output_filename):
     with open(output_filename, 'w') as f:
         f.write(x)
     return
+
     
     # f=open(output_filename, 'w')
     # f.write(file_contents.split('\n')[0])
@@ -98,14 +99,16 @@ def read_even_numbered_lines(file_name):
         list: a list of the even-numbered lines of the file
     """
     ### WRITE SOLUTION HERE
-    l=[]
+
     f=open(file_name)
-    x=f.read().split('\n')
-    for i, x in enumerate(x):
-        if i % 2 == 0:
-            l.append(x)
+    x=f.readlines()
     f.close()
+    l=[]
+    for i, a in enumerate(x):
+        if i % 2:
+            l.append(a)
     return l
+
     raise NotImplementedError()
 
 def read_file_in_reverse(file_name):
@@ -125,8 +128,9 @@ def read_file_in_reverse(file_name):
     """
     ### WRITE SOLUTION HERE
     with open(file_name, 'r') as f:
-        x=f.read()
-        l=x.split('\n').reverse()
+        x=f.readlines()
+        l=x[::-1]
+    print(l)
     return l
 
 
