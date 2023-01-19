@@ -57,11 +57,14 @@ class Swiss(Bank):
         print("This is the Swiss Bank")
         return "Swiss Bank: " + str(self.bal)
     def withdraw(self, amount):
-        self.bal=self.bal-amount
-        print("Withdrawn amount: {}".format(amount))
-        print("New Balance: {}".format(self.bal))
-        return self.bal
-
+        if self.bal >= amount:
+            self.bal -= amount
+            print(f"Withdrawn amount: {amount}")
+            print(f"New Balance: {self.bal}")
+            return self.bal
+        else:
+            print("Insufficient funds")
+            return self.bal
 
 
 # Driver Code
